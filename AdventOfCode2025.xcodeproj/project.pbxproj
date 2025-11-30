@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		00922B2F2EDD01E4007F5DF6 /* AocBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 00922B2E2EDD01E4007F5DF6 /* AocBasics */; };
+		00922B322EDD01F6007F5DF6 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 00922B312EDD01F6007F5DF6 /* ArgumentParser */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		00922B212EDD01A0007F5DF6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -35,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00922B322EDD01F6007F5DF6 /* ArgumentParser in Frameworks */,
+				00922B2F2EDD01E4007F5DF6 /* AocBasics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +84,8 @@
 			);
 			name = AdventOfCode2025;
 			packageProductDependencies = (
+				00922B2E2EDD01E4007F5DF6 /* AocBasics */,
+				00922B312EDD01F6007F5DF6 /* ArgumentParser */,
 			);
 			productName = AdventOfCode2025;
 			productReference = 00922B232EDD01A0007F5DF6 /* AdventOfCode2025 */;
@@ -106,6 +115,10 @@
 			);
 			mainGroup = 00922B1A2EDD01A0007F5DF6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				00922B2D2EDD01E4007F5DF6 /* XCLocalSwiftPackageReference "../AocBasics" */,
+				00922B302EDD01F6007F5DF6 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 00922B242EDD01A0007F5DF6 /* Products */;
 			projectDirPath = "";
@@ -295,6 +308,36 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		00922B2D2EDD01E4007F5DF6 /* XCLocalSwiftPackageReference "../AocBasics" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../AocBasics;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00922B302EDD01F6007F5DF6 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00922B2E2EDD01E4007F5DF6 /* AocBasics */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AocBasics;
+		};
+		00922B312EDD01F6007F5DF6 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00922B302EDD01F6007F5DF6 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00922B1B2EDD01A0007F5DF6 /* Project object */;
 }
