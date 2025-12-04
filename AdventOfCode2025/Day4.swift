@@ -19,43 +19,11 @@ struct Day4: AdventDay {
     
     func RunPartOne() throws -> Any {
         var count = 0
-        var otherCount = 0
         for roll in paperRolls.Points {
-            var neighbourCount = 0
-            let fX = roll.key.x
-            let fY = roll.key.y
-            if paperRolls[fX + 1,fY] == "@" {
-                neighbourCount += 1
-            }
-            if paperRolls[fX - 1,fY] == "@" {
-                neighbourCount += 1
-            }
-            if paperRolls[fX,fY + 1] == "@" {
-                neighbourCount += 1
-            }
-            if paperRolls[fX,fY - 1] == "@" {
-                neighbourCount += 1
-            }
-            if paperRolls[fX + 1, fY + 1] == "@" {
-                neighbourCount += 1
-            }
-            if paperRolls[fX - 1, fY - 1] == "@" {
-                neighbourCount += 1
-            }
-            if paperRolls[fX + 1, fY - 1] == "@" {
-                neighbourCount += 1
-            }
-            if paperRolls[fX - 1, fY + 1] == "@" {
-                neighbourCount += 1
-            }
-            if neighbourCount < 4 {
+            if paperRolls.getPopulatedAdjacentNeightbours(of: roll.key, searchChars:["@"]).count < 4 {
                 count += 1
             }
-            if paperRolls.getPopulatedAdjacentNeightbours(of: roll.key, searchChars:["@"]).count < 4 {
-                otherCount += 1
-            }
         }
-        print(otherCount)
         return count
     }
     
